@@ -327,7 +327,7 @@
     <visual name='hokuyo_visual'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
-        <mesh filename="package://rover/meshes/hokuyo.dae"/>
+        <mesh filename="package://slam_rover/meshes/hokuyo.dae"/>
       </geometry>
     </visual>
   </link>
