@@ -10,18 +10,31 @@ The SLAM project as part of the Robotics Nanodegree.
 1. Install ROS.
 
 ```bash
-$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list' && sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116 && sudo apt-get update && sudo apt-get install ros-kinetic-desktop-full && sudo rosdep init && rosdep update && echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc && source ~/.bashrc
+$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+$ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+$ sudo apt-get update
+$ sudo apt-get install ros-kinetic-desktop-full
+$ sudo rosdep init
+$ rosdep update
+$ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+$ source ~/.bashrc
 ```
 Note: Skip this step if ROS is already installed.
 
 2. Install dependencies.
 ```bash
-$ sudo apt-get install ros-kinetic-rtabmap ros-kinetic-rtabmap-ros && sudo apt-get remove ros-kinetic-rtabmap ros-kinetic-rtabmap-ros
+$ sudo apt-get install ros-kinetic-rtabmap ros-kinetic-rtabmap-ros
+$ sudo apt-get remove ros-kinetic-rtabmap ros-kinetic-rtabmap-ros
 ```
 
 3. Install RTAB-Map.
 ```bash
-$ cd ~ && git clone https://github.com/introlab/rtabmap.git rtabmap && cd rtabmap/build && cmake .. && make && sudo make install
+$ cd ~
+$ git clone https://github.com/introlab/rtabmap.git rtabmap
+$ cd rtabmap/build
+$ cmake ..
+$ make
+$ sudo make install
 ```
 
 4. Create `.gazebo` folder: Open gazebo and then close it.
