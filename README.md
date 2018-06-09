@@ -45,6 +45,16 @@ $ curl -L https://s3-us-west-1.amazonaws.com/udacity-robotics/Term+2+Resources/P
 ```
 
 ## Usage
-1. Create catkin workspace.
+1. Create catkin workspace. See [tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
 2. Clone this repo into the `src` folder.
-3. Run the bash script `./rtab_run`.
+```bash
+$ cd ~/catkin_ws/src/
+$ git clone https://github.com/S2H-Mobile/RoboND-SLAM-Project.git
+```
+3. Build the workspace
+```bash
+$ cd ~/catkin_ws/
+$ catkin_make
+$ source devel/setup.bash
+```
+4. Run the bash script `./rtab_run`.
