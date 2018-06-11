@@ -264,43 +264,69 @@
     <joint_properties damping="1.0" friction="1.0"/>
   </joint>
 
-  <!-- camera -->
+  <!-- Kinect RGB camera frame -->
+  <link name="camera_rgb_frame"/>
+  <joint name="camera_rgb_joint" type="fixed">
+    <origin xyz="0.21 0  0" rpy="0 0 0"/>
+    <parent link="chassis"/>
+    <child link="camera_rgb_frame"/>
+  </joint>
+
+  <!-- Camera link contains visualization information -->
   <link name='camera'>
     <pose>0 0 0.1 0 0 0</pose>
-
     <inertial>
-      <mass value="0.1"/>
+      <mass value="0.564"/>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <inertia
-          ixx="1e-6" ixy="0" ixz="0"
-          iyy="1e-6" iyz="0"
-          izz="1e-6"
+          ixx="0.003881243" ixy="0" ixz="0"
+          iyy="0.000498940" iyz="0"
+          izz="0.003879257"
       />
     </inertial>
 
     <collision name='camera_collision'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
-        <box size=".05 .05 .05"/>
+        <box size="0.07271 0.27794 0.073"/>
       </geometry>
     </collision>
 
     <visual name='camera_visual'>
-      <origin xyz="0 0 0" rpy=" 0 0 0"/>
-      <material name="skyblue"/>
+      <origin xyz="0 0 0" rpy="0 0 1.571"/>
       <geometry>
-        <box size=".05 .05 .05"/>
+        <mesh filename="package://slam_rover/meshes/kinect.dae"/>
       </geometry>
     </visual>
   </link>
-
-  <joint type="fixed" name="camera_joint">
-    <origin xyz="0.21 0 0" rpy="0 0 0"/>
+  <joint name="camera_joint" type="fixed">
+    <origin xyz="-0.031 0 -0.016" rpy="0 0 0"/>
+    <parent link="camera_rgb_frame"/>
     <child link="camera"/>
-    <parent link="chassis"/>
-    <axis xyz="0 1 0" rpy="0 0 0"/>
-    <limit effort="10000" velocity="1000"/>
-    <joint_properties damping="1.0" friction="1.0"/>
+  </joint>
+
+  <!-- Kinect RGB camera optical frame -->
+  <link name="camera_rgb_optical_frame"/>
+  <joint name="camera_rgb_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.571 0 -1.571"/>
+    <parent link="camera_rgb_frame"/>
+    <child link="camera_rgb_optical_frame"/>
+  </joint>
+
+  <!-- Kinect depth camera frame -->
+  <link name="camera_depth_frame"/>
+  <joint name="camera_depth_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="camera_rgb_frame"/>
+    <child link="camera_depth_frame"/>
+  </joint>
+
+  <!-- Kinect depth camera optical frame -->
+  <link name="camera_depth_optical_frame"/>
+  <joint name="camera_depth_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.571 0 -1.571"/>
+    <parent link="camera_depth_frame"/>
+    <child link="camera_depth_optical_frame"/>
   </joint>
 
   <!-- laser range finder -->
