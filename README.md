@@ -1,5 +1,7 @@
 # RoboND-SLAM-Project
-The SLAM project as part of the Robotics Nanodegree.
+This project is part of the Robotics Nanodegree. A mobile robot performs SLAM in two simulated indoor environments.
+
+The ROS package `slam_rover` contains the URDF description of a mobile rover equipped with a Kinect RGB-D camera and a Hokuyo laser range finder, the SDF definitions of two Gazebo worlds, and launch files for localization, mapping, visualization and teleoperating the rover.
 
 ## Setup
 ### Ubuntu 16.04
@@ -57,4 +59,4 @@ $ cd ~/catkin_ws/
 $ catkin_make
 $ source devel/setup.bash
 ```
-4. Run the bash script `./rtab_run`.
+4. Run the bash script `./rtab_run` and select either the `kitchen_dining.world` or the `cafe.world`. Teleoperate the rover to perform SLAM in the specified environment.
