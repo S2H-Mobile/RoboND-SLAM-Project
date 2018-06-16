@@ -3,6 +3,21 @@ This project is part of the Robotics Nanodegree. A mobile robot performs SLAM in
 
 The ROS package `slam_rover` contains the URDF description of a mobile rover equipped with a Kinect RGB-D camera and a Hokuyo laser range finder, the SDF definitions of two Gazebo worlds, and launch files for localization, mapping, visualization and teleoperating the rover.
 
+## Usage
+1. Create catkin workspace. See [tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
+2. Clone this repo into the `src` folder.
+```bash
+$ cd ~/catkin_ws/src/
+$ git clone https://github.com/S2H-Mobile/RoboND-SLAM-Project.git
+```
+3. Build the workspace
+```bash
+$ cd ~/catkin_ws/
+$ catkin_make
+$ source devel/setup.bash
+```
+4. Run the bash script `./rtab_run` and select either the `kitchen_dining.world` or the `cafe.world`. Teleoperate the rover to perform SLAM in the specified environment.
+
 ## Setup
 ### Ubuntu 16.04
 1. Install ROS.
@@ -45,18 +60,3 @@ $ sudo make install
 ```bash
 $ curl -L https://s3-us-west-1.amazonaws.com/udacity-robotics/Term+2+Resources/P3+Resources/models.tar.gz | tar zx -C ~/.gazebo/
 ```
-
-## Usage
-1. Create catkin workspace. See [tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
-2. Clone this repo into the `src` folder.
-```bash
-$ cd ~/catkin_ws/src/
-$ git clone https://github.com/S2H-Mobile/RoboND-SLAM-Project.git
-```
-3. Build the workspace
-```bash
-$ cd ~/catkin_ws/
-$ catkin_make
-$ source devel/setup.bash
-```
-4. Run the bash script `./rtab_run` and select either the `kitchen_dining.world` or the `cafe.world`. Teleoperate the rover to perform SLAM in the specified environment.
