@@ -14,9 +14,8 @@ $ git clone https://github.com/S2H-Mobile/RoboND-SLAM-Project.git
 ```bash
 $ cd ~/catkin_ws/
 $ catkin_make
-$ source devel/setup.bash
 ```
-4. Launch four ros nodes in separate terminals.
+4. Launch four ROS nodes in separate terminals.
 ```bash
 $ cd ~/catkin_ws
 $ source devel/setup.bash
@@ -39,7 +38,10 @@ $ cd ~/catkin_ws
 $ source devel/setup.bash
 $ roslaunch slam_rover teleop.launch
 ```
-Alternatively, run the bash script `./rtab_run` and select either the `kitchen_dining.world` or the `cafe.world`. Teleoperate the rover to perform SLAM in the specified environment.
+Alternatively, run the bash script `./rtab_run` and select either the `kitchen_dining.world` or the `cafe.world`.
+
+5. Navigate the rover to perform SLAM in the specified environment.
+6. Evaluate the resulting map database with the RTAB-Map Database Viewer. 
 
 ## Setup
 ### Ubuntu 16.04
