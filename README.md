@@ -1,6 +1,8 @@
 # RoboND-SLAM-Project
 This project is part of the Robotics Nanodegree. A mobile robot performs SLAM in two simulated indoor environments.
 
+The writeup report can be found [here](https://github.com/S2H-Mobile/RoboND-SLAM-Project/blob/master/writeup/writeup_map_my_world.pdf).
+
 The ROS package `slam_rover` contains the URDF description of a mobile rover equipped with a Kinect RGB-D camera and a Hokuyo laser range finder, the SDF definitions of two Gazebo worlds, and launch files for localization, mapping, visualization and teleoperating the rover.
 
 ## Usage
