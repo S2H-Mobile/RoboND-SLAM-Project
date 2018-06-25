@@ -16,7 +16,30 @@ $ cd ~/catkin_ws/
 $ catkin_make
 $ source devel/setup.bash
 ```
-4. Run the bash script `./rtab_run` and select either the `kitchen_dining.world` or the `cafe.world`. Teleoperate the rover to perform SLAM in the specified environment.
+4. Launch four ros nodes in separate terminals.
+```bash
+$ cd ~/catkin_ws
+$ source devel/setup.bash
+$ roslaunch slam_rover world.launch
+```
+
+```bash
+$ cd ~/catkin_ws
+$ source devel/setup.bash
+$ roslaunch slam_rover mapping.launch
+```
+
+```bash
+$ cd ~/catkin_ws
+$ source devel/setup.bash
+$ roslaunch slam_rover rviz.launch
+```
+```bash
+$ cd ~/catkin_ws
+$ source devel/setup.bash
+$ roslaunch slam_rover teleop.launch
+```
+Alternatively, run the bash script `./rtab_run` and select either the `kitchen_dining.world` or the `cafe.world`. Teleoperate the rover to perform SLAM in the specified environment.
 
 ## Setup
 ### Ubuntu 16.04
