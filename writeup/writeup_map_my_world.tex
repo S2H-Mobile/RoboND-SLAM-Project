@@ -239,7 +239,9 @@ Remote controlled mapping runs were performed in both worlds. In order to collec
 \subsection{Kitchen Dining World}
 Mapping run $1$ in the kitchen dining world resulted in a graph with $140$ global loop closures. The \rtab\ database created during this mapping run can be downloaded as a \href{https://drive.google.com/open?id=1t1IpTFzVJdJpQvhg2gkvDuGDFBH2YYIq}{shared file} (approx.\ 155 MB download, file name is \texttt{rtabmap\_kitchen\_dining\_run1.db}).
 
-The database was evaluated using \rtab \ Database Viewer. The robot trajectory while traversing the kitchen dining world and the graph view of the resulting 2D occupancy grid are shown in figure \ref{fig:graph_view_kitchen_dining_small}.\footnote{A full-screen capture of the \rtab\ graph view including the loop closure data is shown in figure \ref{fig:graph_view_kitchen_dining} below.} The 2D map overlaid on the occupancy grid is shown in figure \ref{fig:occupancy_grid_kitchen_dining}. 
+The database was evaluated using \rtab \ Database Viewer. Instances of loop closures were examined and visualized, see figures \ref{fig:loop_closure_1}, \ref{fig:loop_closure_2}, \ref{fig:loop_closure_3}, \ref{fig:loop_closure_4}. Yellow circles indicate image features, and pink circles indicate image features that match different points on the robot trajectory.
+
+The robot trajectory while traversing the kitchen dining world and the graph view of the resulting 2D occupancy grid are shown in figure \ref{fig:graph_view_kitchen_dining_small}. The 2D map overlaid on the occupancy grid is shown in figure \ref{fig:occupancy_grid_kitchen_dining}. 
 
 \begin{figure}[thpb]
       \centering
@@ -254,8 +256,6 @@ The database was evaluated using \rtab \ Database Viewer. The robot trajectory w
       \caption{2D map and occupancy grid of kitchen dining world created during mapping run $1$. Screenshot taken in \rtab\ Database Viewer.}
       \label{fig:occupancy_grid_kitchen_dining}
 \end{figure}
-
-Instances of loop closures were then examined and visualized in the constraints view. Figure \ref{fig:loop_closure_kitchen_dining} shows the constraints view for the loop closure between index $92$ and index $139$ in the database. Yellow circles indicate image features, and pink circles indicate image features that match different points on the robot trajectory.
 
 The \emph{Export 3D Clouds} functionality was then used to reconstruct 3D point clouds. In the first export, the default settings were kept. Figure \ref{fig:3d_point_cloud_kitchen_dining_default} shows the resulting reconstruction of the kitchen dining world. The features in the environment like tables and chairs are recognizable, see the further discussion in section \ref{sec:discussion}.
 
@@ -291,9 +291,28 @@ A physical mobile robot based on the Jetson TX2 is under construction. The plan 
 
 \begin{figure*}[thpb]
       \centering
-      \includegraphics[width=\textwidth]{images/loop_closure_kitchen_dining.jpg}
-      \caption{Example of a loop closure in the map database for the \texttt{kitchen\_dining.world}. Screenshot taken in \rtab\ Database Viewer.}
-      \label{fig:loop_closure_kitchen_dining}
+      \includegraphics[width=\textwidth]{images/loop_closure_1.jpg}
+      \caption{Loop closure in the map database \texttt{rtabmap\_kitchen\_dining\_run1.db}. Screenshot taken in \rtab\ Database Viewer.}
+      \label{fig:loop_closure_1}
+\end{figure*}
+
+\begin{figure*}[thpb]
+      \centering
+      \includegraphics[width=\textwidth]{images/loop_closure_2.jpg}
+      \caption{Loop closure in the map database \texttt{rtabmap\_kitchen\_dining\_run1.db}. Screenshot taken in \rtab\ Database Viewer.}
+      \label{fig:loop_closure_2}
+\end{figure*}
+\begin{figure*}[thpb]
+      \centering
+      \includegraphics[width=\textwidth]{images/loop_closure_3.jpg}
+      \caption{Loop closure in the map database \texttt{rtabmap\_kitchen\_dining\_run1.db}. Screenshot taken in \rtab\ Database Viewer.}
+      \label{fig:loop_closure_3}
+\end{figure*}
+\begin{figure*}[thpb]
+      \centering
+      \includegraphics[width=\textwidth]{images/loop_closure_4.jpg}
+      \caption{Loop closure in the map database \texttt{rtabmap\_kitchen\_dining\_run1.db}. Screenshot taken in \rtab\ Database Viewer.}
+      \label{fig:loop_closure_4}
 \end{figure*}
 
 \begin{figure*}[thpb]
@@ -336,13 +355,6 @@ A physical mobile robot based on the Jetson TX2 is under construction. The plan 
       \includegraphics[width=\textwidth]{images/cafe_3D_right.jpg}
       \caption{3D view of the cafe world with enhanced reconstruction options enabled. Screenshot taken in \rtab\ Database Viewer.}
       \label{fig:cafe_3D_right}
-\end{figure*}
-
-\begin{figure*}[thpb]
-      \centering
-      \includegraphics[width=\textwidth]{images/graph_view_kitchen_dining.jpg}
-      \caption{Graph view showing the 2D map of the kitchen dining world created during mapping run $1$. A total of $140$ global loop closures was detected. Screenshot taken in \rtab\ Database Viewer.}
-      \label{fig:graph_view_kitchen_dining}
 \end{figure*}
 
 \begin{figure*}[thpb]
