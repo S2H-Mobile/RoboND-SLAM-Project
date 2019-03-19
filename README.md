@@ -2,14 +2,14 @@
 
 [screenshot_3D]: ./writeup/images/3D_point_cloud_kitchen_dining_settings_default.jpg
 
-# RoboND-SLAM-Project
+# RoboND-SLAM-Project, Map my world
 This project is part of the Robotics Nanodegree. A mobile robot performs SLAM in two simulated indoor environments. It generates 2D and 3D maps.
 
 ![3D map of the kitchen dining world.][screenshot_3D]
 
-The writeup report can be found [here](https://github.com/S2H-Mobile/RoboND-SLAM-Project/blob/master/writeup/writeup_map_my_world.pdf).
-
-The ROS package `slam_rover` contains the URDF description of a mobile rover equipped with a Kinect RGB-D camera and a Hokuyo laser range finder, the SDF definitions of two Gazebo worlds, and launch files for localization, mapping, visualization and teleoperating the rover.
+## Contents
+- The [writeup report](https://github.com/S2H-Mobile/RoboND-SLAM-Project/blob/master/writeup/writeup_map_my_world.pdf).
+- The ROS package `slam_rover` contains the URDF description of a mobile rover equipped with a Kinect RGB-D camera and a Hokuyo laser range finder, the SDF definitions of two Gazebo worlds, and launch files for localization, mapping, visualization and teleoperating the rover.
 
 ## Usage
 1. Create catkin workspace. See [tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
