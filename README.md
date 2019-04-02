@@ -11,46 +11,6 @@ This project is part of the Robotics Nanodegree. A mobile robot performs SLAM in
 - The [writeup report](https://github.com/S2H-Mobile/RoboND-SLAM-Project/blob/master/writeup/writeup_map_my_world.pdf).
 - The ROS package `slam_rover` contains the URDF description of a mobile rover equipped with a Kinect RGB-D camera and a Hokuyo laser range finder, the SDF definitions of two Gazebo worlds, and launch files for localization, mapping, visualization and teleoperating the rover.
 
-## Usage
-1. Create catkin workspace. See [tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
-2. Clone this repo into the `src` folder.
-```bash
-$ cd ~/catkin_ws/src/
-$ git clone https://github.com/S2H-Mobile/RoboND-SLAM-Project.git
-```
-3. Build the workspace
-```bash
-$ cd ~/catkin_ws/
-$ catkin_make
-```
-4. Launch four ROS nodes in separate terminals.
-```bash
-$ cd ~/catkin_ws
-$ source devel/setup.bash
-$ roslaunch slam_rover world.launch
-```
-
-```bash
-$ cd ~/catkin_ws
-$ source devel/setup.bash
-$ roslaunch slam_rover mapping.launch
-```
-
-```bash
-$ cd ~/catkin_ws
-$ source devel/setup.bash
-$ roslaunch slam_rover rviz.launch
-```
-```bash
-$ cd ~/catkin_ws
-$ source devel/setup.bash
-$ roslaunch slam_rover teleop.launch
-```
-Alternatively, run the bash script `./rtab_run` and select either the `kitchen_dining.world` or the `cafe.world`.
-
-5. Navigate the rover to perform SLAM in the specified environment.
-6. Evaluate the resulting map database with the RTAB-Map Database Viewer. 
-
 ## Setup
 ### Ubuntu 16.04
 1. Install ROS.
@@ -93,3 +53,43 @@ $ sudo make install
 ```bash
 $ curl -L https://s3-us-west-1.amazonaws.com/udacity-robotics/Term+2+Resources/P3+Resources/models.tar.gz | tar zx -C ~/.gazebo/
 ```
+
+## Usage
+1. Create catkin workspace. See [tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
+2. Clone this repo into the `src` folder.
+```bash
+$ cd ~/catkin_ws/src/
+$ git clone https://github.com/S2H-Mobile/RoboND-SLAM-Project.git
+```
+3. Build the workspace
+```bash
+$ cd ~/catkin_ws/
+$ catkin_make
+```
+4. Launch four ROS nodes in separate terminals.
+```bash
+$ cd ~/catkin_ws
+$ source devel/setup.bash
+$ roslaunch slam_rover world.launch
+```
+
+```bash
+$ cd ~/catkin_ws
+$ source devel/setup.bash
+$ roslaunch slam_rover mapping.launch
+```
+
+```bash
+$ cd ~/catkin_ws
+$ source devel/setup.bash
+$ roslaunch slam_rover rviz.launch
+```
+```bash
+$ cd ~/catkin_ws
+$ source devel/setup.bash
+$ roslaunch slam_rover teleop.launch
+```
+Alternatively, run the bash script `./rtab_run` and select either the `kitchen_dining.world` or the `cafe.world`.
+
+5. Navigate the rover to perform SLAM in the specified environment.
+6. Evaluate the resulting map database with the RTAB-Map Database Viewer. 
