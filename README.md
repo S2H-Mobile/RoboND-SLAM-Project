@@ -86,10 +86,10 @@ $ cmake ..
 $ make
 $ sudo make install
 ```
+4. Install [rtabmap_ros](https://github.com/introlab/rtabmap_ros).
+5. Create `.gazebo` folder: Open gazebo and then close it.
 
-4. Create `.gazebo` folder: Open gazebo and then close it.
-
-5. Add model collision adjustments.
+6. Add model collision adjustments.
 ```bash
 $ curl -L https://s3-us-west-1.amazonaws.com/udacity-robotics/Term+2+Resources/P3+Resources/models.tar.gz | tar zx -C ~/.gazebo/
 ```
