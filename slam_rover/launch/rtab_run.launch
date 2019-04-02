@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <include file="$(find slam_rover)/launch/world.launch"/>
+  <include file="$(find slam_rover)/launch/teleop.launch"/>
+  <include file="$(find slam_rover)/launch/mapping.launch"/>
+  <include file="$(find slam_rover)/launch/rviz.launch"/>
+</launch>
