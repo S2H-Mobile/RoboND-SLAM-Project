@@ -55,38 +55,42 @@ $ curl -L https://s3-us-west-1.amazonaws.com/udacity-robotics/Term+2+Resources/P
 ```
 
 ## Usage
-1. Create catkin workspace. See [tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
+1. Create a catkin workspace. See [tutorial](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
 2. Clone this repo into the `src` folder.
 ```bash
 $ cd ~/catkin_ws/src/
 $ git clone https://github.com/S2H-Mobile/RoboND-SLAM-Project.git
 ```
-3. Build the workspace
+3. Build the catkin workspace.
 ```bash
 $ cd ~/catkin_ws/
 $ catkin_make
 ```
-4. Launch four ROS nodes in separate terminals.
+4. Source the bash setup file.
 ```bash
-$ cd ~/catkin_ws
-$ source devel/setup.bash
+$ source ~/catkin_ws/devel/setup.bash
+```
+5. Run the main launch file.
+```bash
+$ roslaunch slam_rover rtab_run.launch
+```
+This will start four ROS nodes,
+- the Gazebo simulation,
+- the mapping node,
+- the RViz window,
+- and the teleoperation node for the rover.
+
+You can start these nodes individually using the following launch files in separate terminals: 
+```bash
 $ roslaunch slam_rover world.launch
 ```
-
 ```bash
-$ cd ~/catkin_ws
-$ source devel/setup.bash
 $ roslaunch slam_rover mapping.launch
 ```
-
 ```bash
-$ cd ~/catkin_ws
-$ source devel/setup.bash
 $ roslaunch slam_rover rviz.launch
 ```
 ```bash
-$ cd ~/catkin_ws
-$ source devel/setup.bash
 $ roslaunch slam_rover teleop.launch
 ```
 Alternatively, run the bash script `./rtab_run` and select either the `kitchen_dining.world` or the `cafe.world`.
