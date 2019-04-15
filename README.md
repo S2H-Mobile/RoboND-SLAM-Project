@@ -80,7 +80,9 @@ This will start four ROS nodes,
 - the RViz window,
 - and the teleoperation node for the rover.
 
-You can start these nodes individually using the following launch files in separate terminals: 
+When running the project on the Jetson TX2, it is recommended to use the maximum clock speed via the `jetson_clocks.sh` script. 
+
+The nodes can also be launched individually in separate terminals.
 ```bash
 $ roslaunch slam_rover world.launch
 ```
@@ -93,6 +95,7 @@ $ roslaunch slam_rover rviz.launch
 ```bash
 $ roslaunch slam_rover teleop.launch
 ```
+
 Alternatively, run the bash script `./rtab_run` and select either the `kitchen_dining.world` or the `cafe.world`.
 
 5. Navigate the rover to perform SLAM in the specified environment.
