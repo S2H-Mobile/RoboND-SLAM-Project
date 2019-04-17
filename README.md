@@ -33,6 +33,7 @@ Note: Skip this step if ROS is already installed.
 
 2. Install dependencies.
 ```bash
+$ sudo apt-get update
 $ sudo apt-get install ros-kinetic-rtabmap ros-kinetic-rtabmap-ros
 $ sudo apt-get remove ros-kinetic-rtabmap ros-kinetic-rtabmap-ros
 ```
