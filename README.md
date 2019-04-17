@@ -99,4 +99,7 @@ $ roslaunch slam_rover teleop.launch
 Alternatively, run the bash script `./rtab_run` and select either the `kitchen_dining.world` or the `cafe.world`.
 
 5. Navigate the rover to perform SLAM in the specified environment.
-6. Evaluate the resulting map database with the RTAB-Map Database Viewer. 
+6. Evaluate the resulting map database with the RTAB-Map Database Viewer.
+```bash
+$ rtabmap-databaseViewer ~/.ros/rtabmap.db
+```
